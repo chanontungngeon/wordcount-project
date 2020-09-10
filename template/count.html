@@ -1,0 +1,24 @@
+<h1>There are {{count}} words in your text</h1>
+
+<h1>Your text: </h1>
+<!-- access inside dictionary -->
+{{fulltext}}
+
+<h1>Word Count: </h1>
+
+<!-- {{wordcount_dict}} -->
+{%for word,counttotal in wordcount_dict%}
+
+{{ word }} - {{ counttotal }}
+<br />
+{% endfor %}
+
+<a href="{% url 'home' %}">Return Home</a>
+<!-- {% for word, counttotal in sortedwords %}
+
+{{ word }} - {{ counttotal }}
+<br />
+
+
+
+{% endfor %} -->
